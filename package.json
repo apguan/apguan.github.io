@@ -4,6 +4,7 @@
   "description": "my personal website",
   "main": "app.js",
   "scripts": {
+    "start":"http-server -a 127.0.0.1 -p 8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

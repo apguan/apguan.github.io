@@ -1,46 +1,38 @@
 <!-- I'm for hire! If you think I can contribute to your company, please let me know by contacting me! -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Allen Guan</title>
+    <title>my portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-  	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<!--     Google Analytics  -->    
     
+  <!-- <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css"> -->
   </head>
-  <body>
 
-    <div class="" id="navigation-bar">
+  <body ng-app="myPort">
+  <div class="container-fluid">
+    <nav class="nav">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#About">About Me</a></li>
-        <li><a href="#Projects">My Projects</a></li>
-        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#/home">Home</a></li>
+        <li><a href="#/projects">My Projects</a></li>
+          <ul>
+            <li><a href="#/otherprojects">Smaller Projects</a></li>
+          </ul>
+        <li><a href="#/contact">Contact</a></li>
       </ul>
-    </div>
+    </nav>
 
-    <ui-view></ui-view>
+    <div ui-view></div>
+  </div>  
+    <!-- loading angular frameworks -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- app js stuff -->
+    <script src="app.js"></script>
 
-
-  <script src="/bower_components/angular/angular.js"></script>
-  <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="/bower_components/jquery/dist/jquery.js"></script>
-  <script src="app.js"></script>
-<!--   google analytics -->  
-  <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-79793917-1', 'auto');
-      ga('send', 'pageview');
-  </script>
   </body>
 </html>
+

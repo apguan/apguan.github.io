@@ -1,30 +1,27 @@
-(function(){
-'use strict';
-
-angular.module('myPortfolio', ['ui-route'])
+angular.module('myPort', ['ui.router'])
 	
-.config(function($stateProvider, $urlRouterProvider) {
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   	$stateProvider
+	  	.state('home', {
+			url: '/home',
+		    templateUrl: '/app/partials/bio/index.html',
+		    data: {
+		    	css: 'app/partials/bio/stylesheet.css'
+		    }
+		  })
+		.state('projects', {
+			url: '/projects',
+		    templateUrl: '/app/partials/projects/index.html'
+		  })
+		.state('miniprojects', {
+			url: '/otherprojects',
+			templateUrl: '/app/partials/otherprojects/index.html'
+		})
+		.state('contact', {
+			url: '/contact',
+			templateUrl: '/app/partials/contact/index.html'
+		})
+	 $urlRouterProvider.otherwise('/home');
+}]);
 
-	.state('home', {
-		url: '/home',
-	    templateUrl: 'partials/bio.html',
-	    //controller: 'HomeCtrl as home',
-	  })
 
-	.state('projects', {
-		url: '/projects',
-	    templateUrl: 'partials/projects.html',
-	    //controller: 'SearchCtrl as search',
-	  })
-
-	.state('dashboard', {
-		url: '/dashboard',
-		templateUrl: 'partials/contact.html',
-		//controller: 'DashboardCtrl as dash',
-	})
-
-	$urlRouterProvider.otherwise('/home');
-});
-
-})
