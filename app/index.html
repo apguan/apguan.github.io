@@ -6,24 +6,21 @@
     <title>my portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
-  <!-- <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css"> -->
+    <link href='https://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
   </head>
 
   <body ng-app="myPort">
   <div class="container-fluid">
     <nav class="nav">
       <ul>
-        <li><a href="#/home">Home</a></li>
-        <li><a href="#/projects">My Projects</a></li>
-          <ul>
-            <li><a href="#/otherprojects">Smaller Projects</a></li>
-          </ul>
-        <li><a href="#/contact">Contact</a></li>
+        <li><a href="#/home" class="nav-item">Home</a></li>
+        <li><a href="#/projects" class="nav-item">My Projects</a></li>
       </ul>
     </nav>
 
-    <div ui-view></div>
+    <div class="views" ui-view></div>
+
+
   </div>  
     <!-- loading angular frameworks -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -32,7 +29,6 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- app js stuff -->
     <script src="app.js"></script>
-
   </body>
 </html>
 
