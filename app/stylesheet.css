@@ -35,14 +35,13 @@ nav > ul {
 
 nav > ul > li {
 	float: left;
-
 }
 
 .nav-item {
 	display: inline-block;
 	text-decoration: none;
 	color: white;
-	padding: 20px 40px;
+	padding: 20px 30px;
 	transition: background-color 0.3s, color 0.3s;
 }
 
@@ -60,9 +59,10 @@ nav > ul > li > #nav-home {
 	background-color: #00cc7a;
 }
 
-
-
-
+div.examples > a > img:hover {
+	opacity: .5;
+	transition: opacity .3s;
+}
 
 div.views {
 	margin: 100px 7%;
