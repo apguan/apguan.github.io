@@ -55,8 +55,28 @@ nav > ul > li > #nav-home {
 	opacity: 80%;
 }
 
+h5#codepentitles {
+	opacity: 0;
+	font-size: 35px;
+	position: absolute;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+
 .nav-item:focus {
 	background-color: #00cc7a;
+}
+
+.examples {
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+div > a > .image {
+	position: relative;
+
 }
 
 a > .images:hover {
@@ -70,12 +90,4 @@ div.views {
 }
 
 
-.fadetransition.ng-show {
-	 -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-    opacity: 1;
-}
 
-.fadetransition.ng-hide {
-	opacity: 0;
-}

@@ -34,12 +34,11 @@
     <a href="http://codepen.io/apguan">My Codepen</a>
     <br><br>
     <div class="examples">
-        <div ng-repeat="stuff in pictures">
-            <span ng-mouseover = "hoverIn()" ng-mouseleave = "hoverOut()">
-                <span><h5 ng-show="edit" class="fadetransition">{{stuff.name}}</h5></span>
-                <a href="{{stuff.link}}" target="_blank"><img src="{{stuff.url}}" height="50%" width="50%" class="images"></a>
+        <div>
+            <span ng-repeat="stuff in pictures">
+                <a href="{{stuff.link}}" target="_blank"><img src="{{stuff.url}}" height="40%" width="40%" class="images"></a>
+                <h5 id="codepentitles">{{stuff.name}}</h5>
             </span>
-
         </div>
     </div>
 </div>
