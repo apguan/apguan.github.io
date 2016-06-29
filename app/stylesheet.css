@@ -59,7 +59,7 @@ nav > ul > li > #nav-home {
 	background-color: #00cc7a;
 }
 
-div.examples > a > img:hover {
+a > .images:hover {
 	opacity: .5;
 	transition: opacity .3s;
 }
@@ -67,4 +67,15 @@ div.examples > a > img:hover {
 div.views {
 	margin: 100px 7%;
 	background-color: #D3D3D3;
+}
+
+
+.fadetransition.ng-show {
+	 -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+.fadetransition.ng-hide {
+	opacity: 0;
 }

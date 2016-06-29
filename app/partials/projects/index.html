@@ -1,7 +1,7 @@
 <div id="projects">
     <h1>Projects</h1>
     <span>Here are some project's I've done so far</span>
-    <br><br><br>
+    <br><br>
     <div id="hackathon">
         <span><a href="http://devpost.com/software/pride" target="_blank"><b>Pride Softwares</b></a></span>
         <p>Pride is a hackathon project built at HackDavis 2016 to help Teach for America tackle the challenge teachers face when creating lesson plans. It uses IBM's Watson to help parse through data and allows teachers to give feedback to one another. The build wasn't all buttery smooth though! We had some challenges along the way. Originally, we wanted to create the project using a MEAN stack because of all the CRUD operations (no one on the team had done this before). Eventually, we decided we would figure it out some other time, and build the front-end with static HTML and the back-end with Python. In the end won not only Best Education Tool, but also Best Use of Cisco Spark at HackDavis.
@@ -24,6 +24,7 @@
         </div>
     </div>
 </div>
+<br>
 
 <div id="codepen">
   <h1>Some Other Projects</h1>
@@ -33,15 +34,13 @@
     <a href="http://codepen.io/apguan">My Codepen</a>
     <br><br>
     <div class="examples">
-      <h5>jQuery Calculator</h5>
-        <a href="http://codepen.io/apguan/pen/zBvMdJ" target="_blank"><img src="/app/assets/jquerycalc.png" alt="material calculator" height="40%" width="40%" class="images"></a>
-        <h5>Clock</h5>
-        <a href="http://codepen.io/apguan/pen/beeQzd" target="_blank"><img src="/app/assets/clock.png" alt="material calculator" height="40%" width="40%" class="images"></a>
-        <br><br>
-        <h5>Wiki Search</h5>
-        <a href="http://codepen.io/apguan/pen/YqRyqN" target="_blank"><img src="/app/assets/wikisearch.png" alt="material calculator" height="40%" width="40%" class="images"></a>
-        <h5>WikiQuotes</h5>
-        <a href="http://codepen.io/apguan/pen/bpxqMB" target="_blank"><img src="/app/assets/wikiquotes.png" alt="material calculator" height="40%" width="40%" class="images"></a>
+        <div ng-repeat="stuff in pictures">
+            <span ng-mouseover = "hoverIn()" ng-mouseleave = "hoverOut()">
+                <span><h5 ng-show="edit" class="fadetransition">{{stuff.name}}</h5></span>
+                <a href="{{stuff.link}}" target="_blank"><img src="{{stuff.url}}" height="50%" width="50%" class="images"></a>
+            </span>
+
+        </div>
     </div>
 </div>
 
